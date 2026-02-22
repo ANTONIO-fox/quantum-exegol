@@ -1,0 +1,54 @@
+[package]
+name = "quantum-exegol"
+version = "0.1.0"
+edition = "2021"
+authors = ["Research Team"]
+description = "Environmental Cybersecurity Framework - Rust-based alternative to Exegol"
+
+[dependencies]
+# CLI
+clap = { version = "4.4", features = ["derive", "cargo"] }
+colored = "2.1"
+dialoguer = "0.10"
+
+# Async
+tokio = { version = "1", features = ["full"] }
+
+# Docker
+bollard = "0.16"
+docker-api = "0.12"
+
+# Utils
+reqwest = { version = "0.11", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+dirs = "5.0"
+log = "0.4"
+env_logger = "0.10"
+
+# Crypto & Security
+ring = "0.17"
+x509-parser = "0.15"
+aes-gcm = "0.10"
+sha2 = "0.10"
+
+# Math & Quantum (from RUST MATH EXPERIMENTAL)
+ndarray = "0.15"
+num-complex = "0.4"
+rustfft = "6.1"
+
+# Random
+rand = "0.8"
+
+# Async
+futures-util = "0.3"
+
+[features]
+default = ["debug"]
+debug = []
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

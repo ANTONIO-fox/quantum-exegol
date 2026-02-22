@@ -1,0 +1,27 @@
+# Rust
+/target/
+**/target/
+Cargo.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Config local
+.env
+*.local.json
+
+# Build
+*.exe
+*.dll
+*.so
+*.dylib
